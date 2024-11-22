@@ -1,0 +1,17 @@
+{
+  "metadata": {
+    "title": "Glimmer",
+    "description": "Schöner, batterie-inkludierter Next.js Starter, um produktionsreife Apps im Handumdrehen zu versenden."
+  },
+  "words": {
+    "loading": "Laden"
+  },
+  "phrases": {
+    "actionSuccessful": "Aktion erfolgreich",
+    "notFound": "Nicht gefunden"
+  },
+  "sentences": {
+    "pageNotFound": "Die gesuchte Seite existiert nicht",
+    "somethingWentWrong": "Etwas ist schiefgelaufen, bitte versuchen Sie es erneut"
+  }
+}

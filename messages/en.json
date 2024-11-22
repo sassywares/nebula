@@ -1,0 +1,17 @@
+{
+  "metadata": {
+    "title": "Glimmer",
+    "description": "Beautiful, batteries-included Next.js starter to ship production-ready apps at lightspeed."
+  },
+  "words": {
+    "loading": "Loading"
+  },
+  "phrases": {
+    "actionSuccessful": "Action successful",
+    "notFound": "Not found"
+  },
+  "sentences": {
+    "pageNotFound": "The page you are looking for does not exist",
+    "somethingWentWrong": "Something went wrong, please try again"
+  }
+}
