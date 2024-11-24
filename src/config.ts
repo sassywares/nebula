@@ -10,25 +10,25 @@ export type Config = {
   serviceUrl: string;
   i18n: typeof i18nConfig;
   defaults: {
-    staleMilliseconds: number;
-    debounceMilliseconds: number;
-    copyTimeoutMilliseconds: number;
+    staleTimeMs: number;
+    copyTimeoutMs: number;
+    debounceIntervalMs: number;
   };
 };
 
 export const config: Config = (() => {
   const config = {
+    i18n: i18nConfig,
     baseUrl: getConfig("NEXT_PUBLIC_BASE_URL", "http://localhost:3000"),
+    defaults: {
+      staleTimeMs: 1000 * 60 * 30, // 30 minutes,
+      copyTimeoutMs: 3000,
+      debounceIntervalMs: 500,
+    },
     serviceUrl: getConfig(
       "NEXT_PUBLIC_BASE_SERVICE_URL",
       "http://localhost:3000/api/v1",
     ),
-    i18n: i18nConfig,
-    defaults: {
-      staleMilliseconds: 1000 * 60 * 30, // 30 minutes,
-      debounceMilliseconds: 500,
-      copyTimeoutMilliseconds: 3000,
-    },
   } as const;
 
   if (!isServer) {

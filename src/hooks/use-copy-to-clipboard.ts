@@ -14,7 +14,7 @@ import { log, oldSchoolCopy } from "../utils";
  * const [copied, copyToClipboard] = useCopyToClipboard();
  */
 export function useCopyToClipboard(
-  timeoutMilliseconds = config.defaults.copyTimeoutMilliseconds,
+  timeoutMilliseconds = config.defaults.copyTimeoutMs,
 ) {
   const [state, setState] = useState<string>();
 

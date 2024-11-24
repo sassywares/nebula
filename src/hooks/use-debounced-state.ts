@@ -13,7 +13,7 @@ import { useEffect, useRef, useState } from "react";
  */
 export function useDebouncedState<T>(
   value: T,
-  delay = config.defaults.debounceMilliseconds,
+  delay = config.defaults.debounceIntervalMs,
 ) {
   const [debouncedState, setDebouncedState] = useState(value);
   const handler = useRef<null | NodeJS.Timeout>(null);

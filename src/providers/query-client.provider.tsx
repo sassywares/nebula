@@ -9,7 +9,7 @@ import {
 const queryClient = new QueryClient({
   defaultOptions: {
     queries: {
-      staleTime: config.defaults.staleMilliseconds,
+      staleTime: config.defaults.staleTimeMs,
     },
   },
 });

@@ -13,7 +13,7 @@ const nextConfig: NextConfig = {
   experimental: {
     staleTimes: {
       dynamic: 1000 * 60 * 5, // 5 minutes
-      static: config.defaults.staleMilliseconds,
+      static: config.defaults.staleTimeMs,
     },
   },
 };

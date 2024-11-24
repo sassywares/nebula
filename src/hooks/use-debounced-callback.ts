@@ -15,7 +15,7 @@ type CallbackFunction = (...args: any[]) => void;
  */
 export function useDebouncedCallback(
   fn: CallbackFunction,
-  delay = config.defaults.debounceMilliseconds,
+  delay = config.defaults.debounceIntervalMs,
 ) {
   const timeoutRef = useRef<ReturnType<typeof setTimeout>>(undefined);
 

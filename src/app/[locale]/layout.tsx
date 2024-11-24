@@ -1,4 +1,3 @@
-import { GeistSans } from "geist/font/sans";
 import { NextIntlClientProvider } from "next-intl";
 import {
   getMessages,
@@ -18,6 +17,13 @@ import { notFound } from "next/navigation";
 import { ProgressBarProvider } from "@/providers/progress-bar.provider";
 import { Toaster } from "sonner";
 import { LayoutProps } from "./types";
+
+import { Bricolage_Grotesque } from "next/font/google";
+
+const Font = Bricolage_Grotesque({
+  subsets: ["latin"],
+  weight: ["400", "500", "600", "700"],
+});
 
 export function generateStaticParams() {
   return config.i18n.locales.map((locale) => ({ locale }));
@@ -52,18 +58,14 @@ export default async function LocaleLayout({ params, children }: LayoutProps) {
 
   return (
     <html lang={locale} suppressHydrationWarning>
-      <body
-        dir={direction}
-        suppressHydrationWarning
-        className={GeistSans.className}
-      >
-        <NextIntlClientProvider messages={messages}>
-          <ThemeProvider enableSystem attribute="class" defaultTheme="system">
+      <body dir={direction} className={Font.className}>
+        <ThemeProvider>
+          <NextIntlClientProvider messages={messages}>
             <QueryClientProvider>{children}</QueryClientProvider>
             <Toaster richColors position="top-center" />
-          </ThemeProvider>
-        </NextIntlClientProvider>
-        <ProgressBarProvider />
+          </NextIntlClientProvider>
+          <ProgressBarProvider />
+        </ThemeProvider>
       </body>
     </html>
   );
