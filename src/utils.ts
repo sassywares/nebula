@@ -27,7 +27,7 @@ export function cn(...inputs: ClassValue[]) {
 }
 
 export function getTransition() {
-  return `transition-all duration-200 ease-in-out`;
+  return `transition-all duration-100 ease-in-out`;
 }
 
 // =============================================================================

@@ -7,7 +7,7 @@ import { cn, getTransition } from "@/utils";
 
 const buttonVariants = cva(
   cn(
-    "inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-md text-sm font-medium focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50 [&_svg]:pointer-events-none [&_svg]:size-4 [&_svg]:shrink-0",
+    "inline-flex gap-2 whitespace-nowrap rounded-md text-sm font-medium focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50 [&_svg]:pointer-events-none [&_svg]:size-4 [&_svg]:shrink-0",
     getTransition(),
   ),
   {
@@ -30,11 +30,19 @@ const buttonVariants = cva(
         sm: "h-8 rounded-md px-3 text-xs",
         lg: "h-10 rounded-md px-5 text-lg",
         icon: "h-9 w-9",
+        "icon-sm": "h-8 w-8",
+        "icon-lg": "h-10 w-10",
+      },
+      align: {
+        default: "items-center justify-center",
+        left: "justify-start",
+        right: "justify-end",
       },
     },
     defaultVariants: {
       variant: "default",
       size: "default",
+      align: "default",
     },
   },
 );
@@ -45,12 +53,12 @@ export type ButtonProps = ComponentPropsWithAsChild<
 >;
 
 const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(
-  ({ className, variant, size, asChild = false, ...props }, ref) => {
+  ({ className, variant, size, align, asChild = false, ...props }, ref) => {
     const Comp = asChild ? Slot : "button";
     return (
       <Comp
         ref={ref}
-        className={cn(buttonVariants({ variant, size }), className)}
+        className={cn(buttonVariants({ variant, size, align }), className)}
         {...props}
       />
     );

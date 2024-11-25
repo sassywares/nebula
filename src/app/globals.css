@@ -16,13 +16,6 @@
     /* Height */
     --topbar-height: 5rem;
 
-    /* Screens */
-    --screen-sm: 540px;
-    --screen-md: 768px;
-    --screen-lg: 1024px;
-    --screen-xl: 1280px;
-    --screen-2xl: 1536px;
-
     /* Colors */
     --background: 0 0% 100%;
     --foreground: 240 10% 3.9%;

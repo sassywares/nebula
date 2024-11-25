@@ -34,7 +34,7 @@ Compatible with Next.js 15.0.0+ and React 19.0.0+
 - Project structure 📂 with DDD
 - Testing 🧪 with Jest and Cypress
 - Services 📦 with Axios, React Query, and a CRUD starter
-- Everyday hooks 🔥 (useMediaQuery, useLocalStorage, etc)
+- Everyday hooks 🔥 (useMediaQueryMatches, useLocalStorage, etc)
 - Just about everything else you need to ship a production-ready app
 
 ## Getting started
@@ -364,7 +364,7 @@ A few notable examples are:
 
 - [useCopyToClipboard](./src/hooks/use-copy-to-clipboard.ts)
 - [useIntersectionObserver](./src/hooks/use-intersection-observer.ts)
-- [useMediaQuery](./src/hooks/use-media-query.ts)
+- [useMediaQueryMatches](./src/hooks/use-media-query-matches.ts)
 
 There are a lot more, do checkout the directory to see the full list.
 

@@ -17,11 +17,11 @@ const config = {
         topbar: "var(--topbar-height)",
       },
       screens: {
-        sm: "var(--screen-sm)",
-        md: "var(--screen-md)",
-        lg: "var(--screen-lg)",
-        xl: "var(--screen-xl)",
-        "2xl": "var(--screen-2xl)",
+        sm: "540px",
+        md: "768px",
+        lg: "1024px",
+        xl: "1280px",
+        "2xl": "1536px",
       },
       fontFamily: {
         sans: "var(--font-sans)",
