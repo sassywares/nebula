@@ -11,14 +11,12 @@ export type RouteValue =
 export type Routes = Record<string, RouteValue | Record<string, RouteValue>>;
 
 export const routes = {
+  home: "/",
+  docs: "/docs",
+  blog: "/blog",
+  about: "/about",
   signIn: (redirectUrl?: string) =>
     redirectUrl ? `/sign-in?redirectUrl=${redirectUrl}` : "/sign-in",
-  rsc: {
-    users: "/rsc/users",
-    user: (id: string) => `/rsc/users/${id}`,
-  },
-  reactQuery: {
-    users: "/rq/users",
-    user: (id: string) => `/rq/users/${id}`,
-  },
+  pricing: "/pricing",
+  integrations: "/integrations",
 } as const satisfies Routes;

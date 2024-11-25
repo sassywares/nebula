@@ -18,11 +18,12 @@ import { ProgressBarProvider } from "@/providers/progress-bar.provider";
 import { Toaster } from "sonner";
 import { LayoutProps } from "./types";
 
+import { BelowTopbar, Topbar } from "@/components/topbar";
 import { Bricolage_Grotesque } from "next/font/google";
 
 const Font = Bricolage_Grotesque({
   subsets: ["latin"],
-  weight: ["400", "500", "600", "700"],
+  weight: ["300", "400", "500", "600", "700"],
 });
 
 export function generateStaticParams() {
@@ -61,7 +62,10 @@ export default async function LocaleLayout({ params, children }: LayoutProps) {
       <body dir={direction} className={Font.className}>
         <ThemeProvider>
           <NextIntlClientProvider messages={messages}>
-            <QueryClientProvider>{children}</QueryClientProvider>
+            <QueryClientProvider>
+              <Topbar />
+              <BelowTopbar>{children}</BelowTopbar>
+            </QueryClientProvider>
             <Toaster richColors position="top-center" />
           </NextIntlClientProvider>
           <ProgressBarProvider />

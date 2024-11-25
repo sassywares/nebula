@@ -7,12 +7,21 @@ const config = {
   plugins: [require("tailwindcss-animate"), require("@tailwindcss/typography")],
   theme: {
     extend: {
+      height: {
+        topbar: "var(--topbar-height)",
+      },
+      zIndex: {
+        topbar: "var(--z-topbar)",
+      },
+      padding: {
+        topbar: "var(--topbar-height)",
+      },
       screens: {
-        sm: "540px",
-        md: "768px",
-        lg: "1024px",
-        xl: "1280px",
-        "2xl": "1536px",
+        sm: "var(--screen-sm)",
+        md: "var(--screen-md)",
+        lg: "var(--screen-lg)",
+        xl: "var(--screen-xl)",
+        "2xl": "var(--screen-2xl)",
       },
       fontFamily: {
         sans: "var(--font-sans)",

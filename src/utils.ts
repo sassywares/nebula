@@ -26,6 +26,10 @@ export function cn(...inputs: ClassValue[]) {
   return twMerge(clsx(inputs));
 }
 
+export function getTransition() {
+  return `transition-all duration-200 ease-in-out`;
+}
+
 // =============================================================================
 // Common
 // =============================================================================

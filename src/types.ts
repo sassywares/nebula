@@ -1,3 +1,8 @@
+export enum Theme {
+  Dark = "dark",
+  Light = "light",
+}
+
 // Update these as per your tailwind config
 export enum Breakpoint {
   sm = 540,
